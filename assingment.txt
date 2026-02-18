@@ -1,0 +1,35 @@
+IT 386 – Programming Assignment
+In this assignment, you will work in pairs, where one team member can run the UDP server on the
+bur.ad.ilstu.edu IT Linux terminal, and the other team member can run the UDP client on the
+ash.ad.ilstu.edu, for example.
+You will implement a client-server application using UDP, like the application we did in class using TCP.
+Your client-server application will do the following:
+• client reads a line of characters (message) from its keyboard and sends data to server.
+• server receives the data and converts characters to uppercase.
+• server sends modified data to client as well as the name of the server.
+• To get the name of the server, you can use the following command:
+InetAddress.getLocalHost().getHostName(); which will return a string
+containing the name of the computer (host) you are using
+• client receives modified data and prints the message on its screen.
+Create two classes, one named ClientUDP.java where you will implement the client side of your
+application, and the other class named ServerUDP.java. when you will implement the server side.
+• The port number and hostname should be input as argument input when running your code.
+• Comment and indent your code properly.
+• Add a comment at the beginning of your code with team member’s name.
+The finalized application should show the communication between Client and Server. The Client UDP
+sends a sentence to the server UDP, and the server UDP receives the message, and sends a modified
+sentence back to the Client UDP, which receives and prints to the screen.
+Compiling and Running (open a terminal)
+o Team member 1: Compile and run ServerUDP with port number of your choice.
+o Team member 2: Compile and run the ClientUDP with hostname (machine where ServerUDP is
+running) and port number where the ServerUDP is listening.
+o Each team member takes a screenshot of their terminal operation showing successful interaction with
+the client and the server. The message sent to the client should contain the team member’s name.
+Resources:
+https://docs.oracle.com/javase/tutorial/networking/sockets/index.html
+https://docs.oracle.com/javase/8/docs/api/java/net/package-summary.html
+Submission Guidelines on Canvas.
+Attach a Word document with both team members’ names, the course, and the screenshots of the terminal
+operation described above.
+Attach the ServerUDP.java and ClientUDP.java to the submission as well.
+Note: Both team members should submit the same assignment
