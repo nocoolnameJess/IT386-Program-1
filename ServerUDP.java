@@ -30,13 +30,11 @@ public class ServerUDP {
                 sock.receive(receivePack);
 
                 String receivedMsg = new String(receivePack.getData(), 0, receivePack.getLength());
-
                 System.out.println("Received from the client: " + receivedMsg);
 
                 String upperCaseMsg = receivedMsg.toUpperCase();
 
                 String responseMsg = upperCaseMsg + " from " + hostName;
-
                 System.out.println("sending to the client: " + responseMsg + "\n");
 
                 InetAddress clientAddress = receivePack.getAddress();
